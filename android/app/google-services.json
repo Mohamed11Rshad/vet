@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "893234129491",
+    "project_id": "vet-drug-egy",
+    "storage_bucket": "vet-drug-egy.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893234129491:android:9ca404e3a9926e0af4f4a6",
+        "android_client_info": {
+          "package_name": "com.adlink.vetdrugegy.vetdrugegy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUDZgI1IxOuS5xTHZwnvQxOv4-z1m0SUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893234129491:android:403d8ce113956994f4f4a6",
+        "android_client_info": {
+          "package_name": "com.adlink.vetdrugegyPlus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUDZgI1IxOuS5xTHZwnvQxOv4-z1m0SUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
