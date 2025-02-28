@@ -1,20 +1,14 @@
 import 'dart:convert';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap5/flutter_bootstrap5.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vetdrugegy/Extensions.dart';
 import 'package:vetdrugegy/Models/Constants.dart';
 import 'package:vetdrugegy/Providers/languageProvider.dart';
-import 'package:vetdrugegy/Views/CompassResultView.dart';
-import 'package:vetdrugegy/Views/DrugAddView.dart';
-import 'package:vetdrugegy/Views/HomeView.dart';
 import 'Views/SplashView.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Future<void> saveNotificationToSharedPreferences(RemoteMessage message) async {
