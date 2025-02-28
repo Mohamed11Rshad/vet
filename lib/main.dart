@@ -42,33 +42,31 @@ Future<void> saveNotificationToSharedPreferences(RemoteMessage message) async {
   }
 }
 
-@pragma('vm:entry-point')
-Future<void> backgroundMessageHandler(RemoteMessage message) async {
-  print('Message received in background: ${message.notification?.title}');
-  await saveNotificationToSharedPreferences(message);
-}
+// @pragma('vm:entry-point')
+// Future<void> backgroundMessageHandler(RemoteMessage message) async {
+//   print('Message received in background: ${message.notification?.title}');
+//   await saveNotificationToSharedPreferences(message);
+// }
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
-  FirebaseMessaging messaging = FirebaseMessaging.instance;
+  // FirebaseMessaging messaging = FirebaseMessaging.instance;
 
-  // Request notification permissions for iOS
-  NotificationSettings settings = await messaging.requestPermission(
-    alert: true,
-    badge: true,
-    sound: true,
-  );
+  // // Request notification permissions for iOS
+  // NotificationSettings settings = await messaging.requestPermission(
+  //   alert: true,
+  //   badge: true,
+  //   sound: true,
+  // );
 
-  FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-    print('Message received in foreground: ${message.notification?.title}');
-    saveNotificationToSharedPreferences(message);
+  // FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+  //   print('Message received in foreground: ${message.notification?.title}');
+  //   saveNotificationToSharedPreferences(message);
+  // });
 
-    // Display a notification or handle the message as needed
-  });
-
-  FirebaseMessaging.onBackgroundMessage(backgroundMessageHandler);
+  // FirebaseMessaging.onBackgroundMessage(backgroundMessageHandler);
 
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider<LanguageProvider>(
