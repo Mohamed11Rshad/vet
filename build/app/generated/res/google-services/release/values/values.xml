@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="gcm_defaultSenderId" translatable="false">893234129491</string>
-    <string name="google_api_key" translatable="false">AIzaSyAUDZgI1IxOuS5xTHZwnvQxOv4-z1m0SUY</string>
-    <string name="google_app_id" translatable="false">1:893234129491:android:403d8ce113956994f4f4a6</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAUDZgI1IxOuS5xTHZwnvQxOv4-z1m0SUY</string>
-    <string name="google_storage_bucket" translatable="false">vet-drug-egy.firebasestorage.app</string>
-    <string name="project_id" translatable="false">vet-drug-egy</string>
-</resources>
