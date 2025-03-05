@@ -14,6 +14,18 @@ class NotificationsView extends StatefulWidget {
   State<NotificationsView> createState() => _NotificationsViewState();
 }
 
+Future<List<Map<String, String?>>> getStoredNotifications() async {
+  print("we are in getStoredNotifications");
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  List<String> storedNotifications = prefs.getStringList('notifications') ?? [];
+
+  // Convert the JSON strings back to a list of maps
+  return storedNotifications
+      .map(
+          (notification) => Map<String, String?>.from(jsonDecode(notification)))
+      .toList();
+}
+
 class _NotificationsViewState extends State<NotificationsView> {
   List<Map<String, String?>> notifications = [];
   @override

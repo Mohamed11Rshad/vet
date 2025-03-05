@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:vetdrugegy/Models/Constants.dart';
 
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+//import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'dart:ui';
 class VideoPlayerView extends StatefulWidget {
   final String videoUrl;
@@ -14,7 +14,7 @@ class VideoPlayerView extends StatefulWidget {
 }
 
 class VideoPlayerViewState extends State<VideoPlayerView> {
-  late YoutubePlayerController _controller;
+  //late YoutubePlayerController _controller;
   bool _isPlayerReady = false;
   var _playerState;
   double width = 0.0;
@@ -23,7 +23,7 @@ class VideoPlayerViewState extends State<VideoPlayerView> {
   void initState() {
 
     super.initState();
-    _controller = YoutubePlayerController(
+    /*_controller = YoutubePlayerController(
       initialVideoId: widget!.videoUrl,
       flags: YoutubePlayerFlags(
           mute: false,
@@ -34,18 +34,18 @@ class VideoPlayerViewState extends State<VideoPlayerView> {
           enableCaption: false),
 
     )..addListener(_videoPlayerListner);
-    _playerState = PlayerState.unknown;
+    _playerState = PlayerState.unknown;*/
   }
 
 
 
-  void _videoPlayerListner() {
+  /*void _videoPlayerListner() {
     if (_isPlayerReady && mounted && !_controller.value.isFullScreen) {
       setState(() {
         _playerState = _controller.value.playerState;
       });
     }
-  }
+  }*/
 
 
   @override void didChangeMetrics() {
@@ -90,7 +90,8 @@ class VideoPlayerViewState extends State<VideoPlayerView> {
             child: Center(
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 20,horizontal: 0),
-                child: YoutubePlayer(
+                child:SizedBox()
+                /* YoutubePlayer(
                   controller: _controller,
                   liveUIColor: Colors.amber,
                   onReady: () {
@@ -98,7 +99,7 @@ class VideoPlayerViewState extends State<VideoPlayerView> {
                   },
 
 
-                ),
+                )*/,
               ),
             ),
           )
